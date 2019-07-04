@@ -10,11 +10,42 @@
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
+  <script src="./js/todo.js"> </script>
 </head>
 <body>
     <div class="container">
-        <h1>Todos</h1>
+        <div class="row">
+            <h1>Todos</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6" id="todoForm">
+                <form>
+                    <label for="todo">Add Todo</label>
+                    <input id="todo" name="todo" value="" />
+                    <input type="submit" class="btn btn-primary" value="Add" />
+                </form>
+            </div>
+            <div class="col-md-6" id="todoList">
+                <ul></ul>
+            </div>
+        </div>
     </div>
-    <script src="./js/todo.js" />
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCYi_gVtVRwB7b1sqN3xjDCd_LAlvhOtw0",
+    authDomain: "uofu0419-2.firebaseapp.com",
+    databaseURL: "https://uofu0419-2.firebaseio.com",
+    projectId: "uofu0419-2",
+    storageBucket: "",
+    messagingSenderId: "955727183393",
+    appId: "1:955727183393:web:9eaeba776e1b8032"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
 </body>
 </html>
