@@ -16,9 +16,12 @@ $(document).ready(() => {
      */
     database.ref("/todos").on("child_added", child => {
         let name = child.val();
-        let li = $("<li>");
+        let li = $("<li class='list-group-item'>");
+        let checkbox = $("<input type='checkbox' />");
+        let label = $("<label>");
         //text should prevent xss
-        li.text(name);
+        label.text(name)
+        li.append(checkbox, label);
         $("#todoList ul").append(li);
     });
 
